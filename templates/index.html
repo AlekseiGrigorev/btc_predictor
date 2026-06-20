@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз курса BTCUSDT</title>
+    <!-- Подключаем Chart.js через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📈 Прогноз котировок</h1>
+        
+         <div class="controls">
+            <input type="number" id="patternsCount" placeholder="Количество паттернов" value="5" min="1" max="20">
+            <input type="number" id="daysCount" placeholder="Количество дней" value="30" min="1" max="100">
+            <select id="timeframeSelect">
+                <option value="1d" selected>1 день</option>
+                <option value="4h">4 часа</option>
+                <option value="1h">1 час</option>
+            </select>
+            <button id="btnLoad" onclick="loadData()">1. Загрузить данные</button>
+            <button id="btnChart" onclick="buildChart()">2. Найти паттерны</button>
+        </div>
+
+        <p id="statusMessage" class="status"></p>
+
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+pandas
+fastapi
+uvicorn[standard]
+jinja2
+pybit
+python-multipart
+python-dotenv
+dtw-python
