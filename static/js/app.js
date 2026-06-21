@@ -61,6 +61,7 @@ async function buildChart() {
     const days = getDaysCount();
     const timeframe = getTimeframe();
 
+    document.getElementById('promptText').value = '';
     toggleButtons(true);
     setStatus(`Поиск паттернов (${timeframe})...`, 'loading');
 
@@ -73,8 +74,13 @@ async function buildChart() {
         }
 
         renderPatternsChart(data.patterns, data.reference);
+        const promptEl = document.getElementById('promptText');
+        if (promptEl) {
+            promptEl.value = JSON.stringify(data, null, 2);
+        }
         setStatus('График построен', 'success');
     } catch (error) {
+        document.getElementById('promptText').value = '';
         setStatus(`Ошибка: ${error.message}`, 'error');
     } finally {
         toggleButtons(false);

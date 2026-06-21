@@ -6,6 +6,7 @@
     <title>Прогноз курса BTCUSDT</title>
     <!-- Подключаем Chart.js через CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -28,6 +29,11 @@
 
         <div class="chart-container">
             <canvas id="stockChart"></canvas>
+        </div>
+
+        <div class="prompt-container">
+            <h3>📝 JSON-ответ сервера</h3>
+            <textarea id="promptText" readonly rows="15" cols="50"></textarea>
         </div>
     </div>
 

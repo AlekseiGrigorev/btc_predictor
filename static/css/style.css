@@ -61,4 +61,40 @@ button:disabled { background-color: #ccc; cursor: not-allowed; }
     position: relative;
     height: 400px;
     width: 100%;
+    resize: vertical;
+    overflow: auto;
+    min-height: 200px;
+    max-height: 800px;
+}
+
+.prompt-container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.prompt-container h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#promptText {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    resize: vertical;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#promptText:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
 }
